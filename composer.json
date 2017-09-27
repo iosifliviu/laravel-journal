@@ -1,0 +1,31 @@
+{
+    "name": "iionut/laravel-journal",
+    "description": "Journaling system for Laravel 5.5",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ionut Iosif",
+            "email": "iosif.liviu.ionut@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "laravel/framework": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iionut\\LaravelJournal\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel-journal": {
+            "providers": [
+                "Iionut\\LaravelJournal\\JournalServiceProvider"
+            ],
+            "aliases": {
+                "Journal": "Iionut\\LaravelJournal\\Facade\\Journal"
+            }
+        }
+    }
+}
