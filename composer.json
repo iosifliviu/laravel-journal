@@ -19,7 +19,7 @@
         }
     },
     "extra": {
-        "laravel-journal": {
+        "iionut/laravel-journal": {
             "providers": [
                 "Iionut\\LaravelJournal\\JournalServiceProvider"
             ],
