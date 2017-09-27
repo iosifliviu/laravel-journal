@@ -6,11 +6,11 @@
  * Time: 13:45
  */
 
-namespace App\Lib\Journal\Transformers;
+namespace Iionut\LaravelJournal\Transformers;
 
 
-use App\Lib\Journal\Interfaces\EntryInterface;
-use App\Lib\Journal\Interfaces\TransformerInterface;
+use Iionut\LaravelJournal\Interfaces\EntryInterface;
+use Iionut\LaravelJournal\Interfaces\TransformerInterface;
 use Illuminate\Support\Collection;
 
 class DefaultTransformer implements TransformerInterface

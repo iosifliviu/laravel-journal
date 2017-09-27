@@ -6,7 +6,7 @@
  * Time: 15:51
  */
 
-namespace App\Lib\Journal\Facade;
+namespace Iionut\LaravelJournal\Facade;
 
 
 use Illuminate\Support\Facades\Facade;

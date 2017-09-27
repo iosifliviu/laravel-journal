@@ -6,11 +6,11 @@
  * Time: 11:00
  */
 
-namespace App\Lib\Journal\Adapters;
+namespace Iionut\LaravelJournal\Adapters;
 
 
-use App\Lib\Journal\Interfaces\AdapterInterface;
-use App\Lib\Journal\Interfaces\EntryInterface;
+use Iionut\LaravelJournal\Interfaces\AdapterInterface;
+use Iionut\LaravelJournal\Interfaces\EntryInterface;
 
 class NullAdapter implements AdapterInterface
 {

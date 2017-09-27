@@ -6,26 +6,26 @@
  * Time: 10:57
  */
 
-namespace App\Lib\Journal\Adapters;
+namespace Iionut\Adapters\Adapters;
 
 
-use App\Lib\Journal\Interfaces\AdapterInterface;
-use App\Lib\Journal\Interfaces\EntryInterface;
+use Iionut\LaravelJournal\Interfaces\AdapterInterface;
+use Iionut\LaravelJournal\Interfaces\EntryInterface;
 use Illuminate\Support\Facades\DB;
 
 class DatabaseAdapter implements AdapterInterface
 {
     /**
-     * @var \App\Lib\Journal\Interfaces\TransformerInterface
+     * @var \Iionut\LaravelJournal\Interfaces\TransformerInterface
      */
     private $transformer;
 
     /**
      * DatabaseAdapter constructor.
      *
-     * @param \App\Lib\Journal\Interfaces\TransformerInterface $transformer
+     * @param \Iionut\LaravelJournal\Interfaces\TransformerInterface $transformer
      */
-    public function __construct(\App\Lib\Journal\Interfaces\TransformerInterface $transformer)
+    public function __construct(\Iionut\LaravelJournal\Interfaces\TransformerInterface $transformer)
     {
         $this->transformer = $transformer;
     }

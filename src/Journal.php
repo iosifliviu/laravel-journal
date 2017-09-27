@@ -9,21 +9,21 @@
 namespace App\Lib\Journal;
 
 
-use App\Lib\Journal\Entries\Entry;
+use Iionut\LaravelJournal\Entries\Entry;
 
 class Journal
 {
     /**
-     * @var \App\Lib\Journal\Interfaces\AdapterInterface
+     * @var \Iionut\LaravelJournal\Interfaces\AdapterInterface
      */
     private $adapter;
 
     /**
      * Journal constructor.
      *
-     * @param \App\Lib\Journal\Interfaces\AdapterInterface $adapter
+     * @param \Iionut\LaravelJournal\Interfaces\AdapterInterface $adapter
      */
-    public function __construct(\App\Lib\Journal\Interfaces\AdapterInterface $adapter)
+    public function __construct(\Iionut\LaravelJournal\Interfaces\AdapterInterface $adapter)
     {
         $this->adapter = $adapter;
     }

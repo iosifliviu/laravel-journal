@@ -9,10 +9,10 @@
 namespace App\Lib\Journal;
 
 
-use App\Lib\Journal\Adapters\DatabaseAdapter;
-use App\Lib\Journal\Adapters\Factory;
-use App\Lib\Journal\Adapters\LogAdapter;
-use App\Lib\Journal\Adapters\NullAdapter;
+use Iionut\LaravelJournal\Adapters\DatabaseAdapter;
+use Iionut\LaravelJournal\Adapters\Factory;
+use Iionut\LaravelJournal\Adapters\LogAdapter;
+use Iionut\LaravelJournal\Adapters\NullAdapter;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 

@@ -6,7 +6,7 @@
  * Time: 13:47
  */
 
-namespace App\Lib\Journal\Transformers;
+namespace Iionut\LaravelJournal\Transformers;
 
 
 class LogTransformer extends DefaultTransformer

@@ -6,7 +6,7 @@
  * Time: 10:57
  */
 
-namespace App\Lib\Journal\Interfaces;
+namespace Iionut\LaravelJournal\Interfaces;
 
 
 interface AdapterInterface

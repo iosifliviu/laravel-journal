@@ -6,10 +6,10 @@
  * Time: 13:26
  */
 
-namespace App\Lib\Journal\Transformers;
+namespace Iionut\LaravelJournal\Transformers;
 
 
-use App\Lib\Journal\Interfaces\TransformerInterface;
+use Iionut\LaravelJournal\Interfaces\TransformerInterface;
 use Illuminate\Support\Collection;
 
 class DatabaseTransformer implements TransformerInterface

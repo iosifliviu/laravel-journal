@@ -27,5 +27,8 @@
                 "Journal": "Iionut\\LaravelJournal\\Facade\\Journal"
             }
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.3"
     }
 }

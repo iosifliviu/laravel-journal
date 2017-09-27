@@ -6,7 +6,7 @@
  * Time: 11:33
  */
 
-namespace App\Lib\Journal\Interfaces;
+namespace Iionut\LaravelJournal\Interfaces;
 
 use Illuminate\Support\Collection;
 

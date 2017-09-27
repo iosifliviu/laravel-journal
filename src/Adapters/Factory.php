@@ -6,32 +6,32 @@
  * Time: 13:39
  */
 
-namespace App\Lib\Journal\Adapters;
+namespace Iionut\LaravelJournal\Adapters;
 
 
-use App\Lib\Journal\Interfaces\AdapterInterface;
-use App\Lib\Journal\Transformers\DatabaseTransformer;
+use Iionut\LaravelJournal\Interfaces\AdapterInterface;
+use Iionut\LaravelJournal\Transformers\DatabaseTransformer;
 
 class Factory
 {
 
     /**
-     * @var \App\Lib\Journal\Transformers\Factory
+     * @var \Iionut\LaravelJournal\Transformers\Factory
      */
     private $transformersFactory;
 
     /**
      * Factory constructor.
      *
-     * @param \App\Lib\Journal\Transformers\Factory $transformersFactory
+     * @param \Iionut\LaravelJournal\Transformers\Factory $transformersFactory
      */
-    public function __construct(\App\Lib\Journal\Transformers\Factory $transformersFactory)
+    public function __construct(\Iionut\LaravelJournal\Transformers\Factory $transformersFactory)
     {
         $this->transformersFactory = $transformersFactory;
     }
 
     /**
-     * @return \App\Lib\Journal\Interfaces\AdapterInterface
+     * @return \Iionut\LaravelJournal\Interfaces\AdapterInterface
      */
     public function createDatabaseAdapter(): AdapterInterface
     {
@@ -39,7 +39,7 @@ class Factory
     }
 
     /**
-     * @return \App\Lib\Journal\Interfaces\AdapterInterface
+     * @return \Iionut\LaravelJournal\Interfaces\AdapterInterface
      */
     public function createLogAdapter(): AdapterInterface
     {
@@ -47,7 +47,7 @@ class Factory
     }
 
     /**
-     * @return \App\Lib\Journal\Interfaces\AdapterInterface
+     * @return \Iionut\LaravelJournal\Interfaces\AdapterInterface
      */
     public function createNullAdapter(): AdapterInterface
     {

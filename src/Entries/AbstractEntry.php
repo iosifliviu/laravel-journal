@@ -6,10 +6,10 @@
  * Time: 11:34
  */
 
-namespace App\Lib\Journal\Entries;
+namespace Iionut\LaravelJournal\Entries;
 
 
-use App\Lib\Journal\Interfaces\EntryInterface;
+use Iionut\LaravelJournal\Interfaces\EntryInterface;
 use Illuminate\Support\Collection;
 
 abstract class AbstractEntry implements EntryInterface

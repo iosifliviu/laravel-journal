@@ -6,7 +6,7 @@
  * Time: 13:15
  */
 
-namespace App\Lib\Journal\Entries;
+namespace Iionut\LaravelJournal\Entries;
 
 
 final class Entry extends AbstractEntry
