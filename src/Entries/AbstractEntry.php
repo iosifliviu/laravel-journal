@@ -25,6 +25,11 @@ abstract class AbstractEntry implements EntryInterface
     protected $data = null;
 
     /**
+     * @var null|Collection
+     */
+    public $meta = null;
+
+    /**
      * @return string
      */
     public function __toString(): string
@@ -55,9 +60,9 @@ abstract class AbstractEntry implements EntryInterface
     /**
      * @param string $name
      *
-     * @return $this
+     * @return EntryInterface
      */
-    function setName(string $name)
+    function setName(string $name): EntryInterface
     {
         $this->name = strtolower(snake_case($name));
         return $this;
@@ -66,10 +71,10 @@ abstract class AbstractEntry implements EntryInterface
     /**
      * @param array|\Illuminate\Support\Collection $data
      *
-     * @return $this
+     * @return EntryInterface
      * @throws \InvalidArgumentException
      */
-    function setData($data)
+    function setData($data): EntryInterface
     {
         if (is_null($data)) {
             $this->data = new Collection();
@@ -82,5 +87,13 @@ abstract class AbstractEntry implements EntryInterface
         }
 
         return $this;
+    }
+
+    /**
+     * @return \Illuminate\Support\Collection|null
+     */
+    public function getMeta(): ?Collection
+    {
+        return $this->meta;
     }
 }

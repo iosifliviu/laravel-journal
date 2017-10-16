@@ -27,7 +27,7 @@ interface EntryInterface
      *
      * @return mixed
      */
-    function setName(string $name);
+    function setName(string $name): EntryInterface;
 
     /**
      * @param array|Collection $data
@@ -35,10 +35,15 @@ interface EntryInterface
      * @return $this
      * @throws \InvalidArgumentException
      */
-    function setData( $data);
+    function setData($data): EntryInterface;
 
     /**
      * @return Collection|null
      */
     function getData(): ?Collection;
+
+    /**
+     * @return \Illuminate\Support\Collection|null
+     */
+    function getMeta(): ?Collection;
 }

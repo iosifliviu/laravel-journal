@@ -14,6 +14,8 @@ class CreateJournalTable extends \Illuminate\Database\Migrations\Migration
             $table->increments('id');
             $table->string('entry');
             $table->string('data')->nullable();
+            $table->string('ip', 15)->nullable();
+            $table->string('user_agent')->nullable();
             $table->timestamp('create_at')->default(\Illuminate\Support\Facades\DB::raw('CURRENT_TIMESTAMP'));
         });
     }

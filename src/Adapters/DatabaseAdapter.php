@@ -39,9 +39,11 @@ class DatabaseAdapter implements AdapterInterface
 
         DB::table('journal')->insert([
             [
-                'action'  => $entry->getName(),
-                'user_id' => $transformed['user_id'],
-                'data'    => $transformed['data'],
+                'action'     => $entry->getName(),
+                'user_id'    => $transformed['user_id'],
+                'data'       => $transformed['data'],
+                'ip'         => $entry->getMeta()->get('ip'),
+                'user_agent' => $entry->getMeta()->get('userAgent'),
             ],
         ]);
     }

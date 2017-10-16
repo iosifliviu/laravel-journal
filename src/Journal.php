@@ -10,6 +10,8 @@ namespace Iionut\LaravelJournal;
 
 
 use Iionut\LaravelJournal\Entries\Entry;
+use Iionut\LaravelJournal\Injectors\HttpRequestInjector;
+use Illuminate\Support\Facades\App;
 
 class Journal
 {
@@ -35,6 +37,11 @@ class Journal
     public function __call($name, $arguments)
     {
         $entry = new Entry($name, ...$arguments);
+
+        /** @var \Iionut\LaravelJournal\Interfaces\InjectorInterface $httpRequestInjector */
+        $httpRequestInjector = App::make('HttpRequestInjector');
+
+        $httpRequestInjector->inject($entry);
 
         $this->adapter->write($entry);
     }

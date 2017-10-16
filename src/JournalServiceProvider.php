@@ -10,6 +10,7 @@ namespace Iionut\LaravelJournal;
 
 
 use Iionut\LaravelJournal\Adapters\Factory;
+use Iionut\LaravelJournal\Injectors\HttpRequestInjector;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,6 +27,8 @@ class JournalServiceProvider extends ServiceProvider
 
     public function register()
     {
+        $this->app->bind('HttpRequestInjector', HttpRequestInjector::class);
+
         $this->app->bind('JournalAdapterFactory', Factory::class);
 
         $this->app->bind('Journal', function (Application $app) {
