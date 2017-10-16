@@ -50,6 +50,6 @@ class HttpRequestInjector implements InjectorInterface
             return;
         }
 
-        $entry->getMeta()->put('userAgent', Request::header('User-Agent'));
+        $entry->getMeta()->put('userAgent', Request::header('User-Agent', null));
     }
 }
