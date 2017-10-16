@@ -6,7 +6,7 @@
  * Time: 15:52
  */
 
-namespace App\Lib\Journal;
+namespace Iionut\LaravelJournal;
 
 
 use Iionut\LaravelJournal\Adapters\DatabaseAdapter;

@@ -6,7 +6,7 @@
  * Time: 15:50
  */
 
-namespace App\Lib\Journal;
+namespace Iionut\LaravelJournal;
 
 
 use Iionut\LaravelJournal\Entries\Entry;
