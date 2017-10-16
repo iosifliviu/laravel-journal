@@ -9,7 +9,17 @@
 namespace Iionut\LaravelJournal\Transformers;
 
 
-class LogTransformer extends DefaultTransformer
+use Iionut\LaravelJournal\Interfaces\EntryInterface;
+use Iionut\LaravelJournal\Interfaces\TransformerInterface;
+
+class LogTransformer implements TransformerInterface
 {
+    function transform(EntryInterface $entry): array
+    {
+        return [
+            'data' => $entry->getData()->toArray(),
+            'meta' => $entry->getData()->toArray()
+        ];
+    }
 
 }

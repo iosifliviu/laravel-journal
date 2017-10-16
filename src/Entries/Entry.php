@@ -9,6 +9,8 @@
 namespace Iionut\LaravelJournal\Entries;
 
 
+use Illuminate\Support\Collection;
+
 final class Entry extends AbstractEntry
 {
     /**
@@ -20,6 +22,8 @@ final class Entry extends AbstractEntry
     public function __construct(string $name, $data = null)
     {
         $this->name = $name;
+
+        $this->meta = new Collection();
 
         $this->setData($data);
     }

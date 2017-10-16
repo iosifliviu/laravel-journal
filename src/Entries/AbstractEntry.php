@@ -40,7 +40,7 @@ abstract class AbstractEntry implements EntryInterface
     /**
      * @return string
      */
-    function getName(): string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -48,7 +48,7 @@ abstract class AbstractEntry implements EntryInterface
     /**
      * @return Collection
      */
-    function getData(): Collection
+    public function getData(): Collection
     {
         if (is_null($this->data)) {
             return new Collection();
@@ -62,7 +62,7 @@ abstract class AbstractEntry implements EntryInterface
      *
      * @return EntryInterface
      */
-    function setName(string $name): EntryInterface
+    public function setName(string $name): EntryInterface
     {
         $this->name = strtolower(snake_case($name));
         return $this;
@@ -74,7 +74,7 @@ abstract class AbstractEntry implements EntryInterface
      * @return EntryInterface
      * @throws \InvalidArgumentException
      */
-    function setData($data): EntryInterface
+    public function setData($data): EntryInterface
     {
         if (is_null($data)) {
             $this->data = new Collection();

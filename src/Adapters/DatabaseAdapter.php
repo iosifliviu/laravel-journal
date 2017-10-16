@@ -42,8 +42,8 @@ class DatabaseAdapter implements AdapterInterface
                 'action'     => $entry->getName(),
                 'user_id'    => $transformed['user_id'],
                 'data'       => $transformed['data'],
-                'ip'         => $entry->getMeta()->get('ip'),
-                'user_agent' => $entry->getMeta()->get('userAgent'),
+                'ip'         => $entry->getMeta()->has('ip') ? $entry->getMeta()->get('ip') : null,
+                'user_agent' => $entry->getMeta()->has('userAgent') ? $entry->getMeta()->get('userAgent') : null,
             ],
         ]);
     }
