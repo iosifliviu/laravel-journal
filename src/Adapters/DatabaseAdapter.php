@@ -6,7 +6,7 @@
  * Time: 10:57
  */
 
-namespace Iionut\Adapters\Adapters;
+namespace Iionut\LaravelJournal\Adapters;
 
 
 use Iionut\LaravelJournal\Interfaces\AdapterInterface;

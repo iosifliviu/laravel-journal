@@ -10,7 +10,6 @@ namespace Iionut\LaravelJournal\Adapters;
 
 
 use Iionut\LaravelJournal\Interfaces\AdapterInterface;
-use Iionut\LaravelJournal\Transformers\DatabaseTransformer;
 
 class Factory
 {
