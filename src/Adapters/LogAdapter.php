@@ -30,10 +30,10 @@ class LogAdapter implements AdapterInterface
         $this->transformer = $transformer;
     }
 
-    function write(EntryInterface $action)
+    function write(EntryInterface $entry)
     {
-        $transformed = $this->transformer->transform($action->getData());
+        $transformed = $this->transformer->transform($entry->getData());
 
-        Log::info("Journal Entry {$action->getName()}", $transformed);
+        Log::info("Journal Entry {$entry->getName()}", $transformed);
     }
 }

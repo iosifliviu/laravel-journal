@@ -31,15 +31,15 @@ class DatabaseAdapter implements AdapterInterface
     }
 
     /**
-     * @param EntryInterface $action
+     * @param EntryInterface $entry
      */
-    public function write(EntryInterface $action)
+    public function write(EntryInterface $entry)
     {
-        $transformed = $this->transformer->transform($action);
+        $transformed = $this->transformer->transform($entry);
 
         DB::table('journal')->insert([
             [
-                'action'  => $action->getName(),
+                'action'  => $entry->getName(),
                 'user_id' => $transformed['user_id'],
                 'data'    => $transformed['data'],
             ],

@@ -9,28 +9,28 @@
 namespace Iionut\LaravelJournal\Transformers;
 
 
+use Iionut\LaravelJournal\Interfaces\EntryInterface;
 use Iionut\LaravelJournal\Interfaces\TransformerInterface;
-use Illuminate\Support\Collection;
 
 class DatabaseTransformer implements TransformerInterface
 {
     /**
-     * @param Collection|null $data
+     * @param \Iionut\LaravelJournal\Interfaces\EntryInterface $entry
      *
      * @return array
      */
-    function transform(Collection $data): array
+    function transform(EntryInterface $entry): array
     {
         $return = [
             'user_id' => null,
             'data' => null,
         ];
 
-        if ($data->has('user_id')) {
-            $return['user_id'] = $data->pull('user_id');
+        if ($entry->getData()->has('user_id')) {
+            $return['user_id'] = $entry->getData()->pull('user_id');
         }
 
-        $return['data'] = $data->toArray();
+        $return['data'] = $entry->getData()->toArray();
 
         return $return;
     }

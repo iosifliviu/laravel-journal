@@ -14,7 +14,7 @@ use Iionut\LaravelJournal\Interfaces\EntryInterface;
 
 class NullAdapter implements AdapterInterface
 {
-    public function write(EntryInterface $action)
+    public function write(EntryInterface $entry)
     {
         // do nothing
     }

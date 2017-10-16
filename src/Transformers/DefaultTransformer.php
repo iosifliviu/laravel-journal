@@ -11,16 +11,15 @@ namespace Iionut\LaravelJournal\Transformers;
 
 use Iionut\LaravelJournal\Interfaces\EntryInterface;
 use Iionut\LaravelJournal\Interfaces\TransformerInterface;
-use Illuminate\Support\Collection;
 
 class DefaultTransformer implements TransformerInterface
 {
     /**
-     * @param \Illuminate\Support\Collection $data
+     * @param \Iionut\LaravelJournal\Interfaces\EntryInterface $entry
      *
      * @return array
      */
-    function transform(Collection $data): array
+    function transform(EntryInterface $entry): array
     {
         return $data->toArray();
     }

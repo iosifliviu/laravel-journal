@@ -14,9 +14,9 @@ use Illuminate\Support\Collection;
 interface TransformerInterface
 {
     /**
-     * @param \Illuminate\Support\Collection $data
+     * @param \Iionut\LaravelJournal\Interfaces\EntryInterface $entry
      *
      * @return array
      */
-    function transform(Collection $data): array;
+    function transform(EntryInterface $entry): array;
 }

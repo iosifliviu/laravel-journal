@@ -11,5 +11,5 @@ namespace Iionut\LaravelJournal\Interfaces;
 
 interface AdapterInterface
 {
-    function write(EntryInterface $action);
+    function write(EntryInterface $entry);
 }
