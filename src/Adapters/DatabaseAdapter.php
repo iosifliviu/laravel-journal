@@ -40,10 +40,10 @@ class DatabaseAdapter implements AdapterInterface
         DB::table('journal')->insert([
             [
                 'action'     => $entry->getName(),
-                'user_id'    => $transformed['user_id'],
-                'data'       => !empty($transformed['data']) ? json_encode($transformed['data']) : null,
-                'ip'         => $entry->getMeta()->has('ip') ? $entry->getMeta()->get('ip') : null,
-                'user_agent' => $entry->getMeta()->has('userAgent') ? $entry->getMeta()->get('userAgent') : null,
+                'data' => json_encode([
+                    'data' => !empty($transformed['data']) ? $transformed['data'] : null,
+                    'meta' => $entry->getMeta()->toArray()
+                ]),
             ],
         ]);
     }

@@ -18,7 +18,7 @@ class LogTransformer implements TransformerInterface
     {
         return [
             'data' => $entry->getData()->toArray(),
-            'meta' => $entry->getData()->toArray()
+            'meta' => $entry->getMeta()->toArray()
         ];
     }
 

@@ -12,10 +12,8 @@ class CreateJournalTable extends \Illuminate\Database\Migrations\Migration
     {
         \Illuminate\Support\Facades\Schema::create('journal', function (\Illuminate\Database\Schema\Blueprint $table) {
             $table->increments('id');
-            $table->string('entry');
+            $table->string('action');
             $table->string('data')->nullable();
-            $table->string('ip', 15)->nullable();
-            $table->string('user_agent')->nullable();
             $table->timestamp('create_at')->default(\Illuminate\Support\Facades\DB::raw('CURRENT_TIMESTAMP'));
         });
     }
